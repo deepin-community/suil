@@ -1,0 +1,41 @@
+#!/usr/bin/make -f
+
+include /usr/share/dpkg/architecture.mk
+include /usr/share/dpkg/buildtools.mk
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+bindnow
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+export CC
+export PKGCONFIG = $(PKG_CONFIG)
+
+WAF = python3 ./waf
+
+%:
+	dh $@
+
+override_dh_installchangelogs:
+	dh_installchangelogs NEWS
+
+override_dh_auto_configure:
+	$(WAF) configure \
+		--prefix=/usr \
+		--mandir=/usr/share/man \
+		--libdir=/usr/lib/$(DEB_HOST_MULTIARCH) \
+		--strict
+
+override_dh_auto_build:
+	$(WAF)
+
+override_dh_auto_clean:
+	$(WAF) clean || true
+	find -name "*.pyc" -delete
+	rm -rf build .waf*
+	dh_auto_clean
+
+override_dh_auto_install:
+	$(WAF) install --destdir=$(CURDIR)/debian/tmp
+
+override_dh_shlibdeps:
+	dh_shlibdeps -X libsuil_ -- \
+		-dRecommends $(wildcard debian/libsuil-0-0/usr/lib/$(DEB_HOST_MULTIARCH)/suil-0/*.so) \
+		-dDepends

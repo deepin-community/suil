@@ -1,0 +1,256 @@
+suil (0.10.10-1) UNRELEASED; urgency=medium
+
+  * update
+
+ -- Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>  Mon, 16 May 2022 20:23:23 +0800
+
+suil (0.10.10-1) unstable; urgency=medium
+
+  * New upstream version 0.10.10
+  * d/watch: Update pgpsigurlmangle for asc files
+  * Bump S-V to 4.5.1, no changes needed
+
+ -- Dennis Braun <d_braun@kabelmail.de>  Sun, 17 Jan 2021 22:34:55 +0100
+
+suil (0.10.8-1) unstable; urgency=medium
+
+  [ Sebastian Ramacher ]
+  * Fix compression
+
+  [ Dennis Braun ]
+  * New upstream version 0.10.8
+  * Add libqt5x11extras5-dev to B-Ds and sort B-Ds
+  * Add Build-Depends-Package to symbols file
+  * Add d/upstream/signing-key.asc
+  * Add d/upstream/metadata
+  * Add me as uploader
+  * Bump dh-compat to 13
+  * Update d/copyright year
+
+ -- Dennis Braun <d_braun@kabelmail.de>  Wed, 07 Oct 2020 11:53:31 +0200
+
+suil (0.10.6-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Use secure URI in debian/watch
+
+  [ Olivier Humbert ]
+  * Use https protocol in d/control and d/copyright
+
+  [ Dennis Braun ]
+  * New upstream release
+  * d/control: Bump standards version to 4.5.0
+  * d/copyright: Update year
+  * Remove d/unpack_waf.sh
+  * d/rules: Fix FTCBFS
+
+ -- Dennis Braun <d_braun@kabelmail.de>  Sat, 01 Feb 2020 18:48:43 +0100
+
+suil (0.10.4-2) unstable; urgency=medium
+
+  * Team upload
+  * debian/: Only recommend dependencies of modules. The host application will
+    already depend on the right UI toolkit anyway. (Closes: #875655)
+  * debian/control: Remove obsolete Pre-Depends
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Wed, 16 Oct 2019 23:19:17 +0200
+
+suil (0.10.4-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Ondřej Nový ]
+  * d/copyright: Use https protocol in Format field
+  * d/control: Set Vcs-* to salsa.debian.org
+
+  [ Felipe Sateler ]
+  * Change maintainer address to debian-multimedia@lists.debian.org
+
+  [ Ondřej Nový ]
+  * Use debhelper-compat instead of debian/compat
+
+  [ Sebastian Ramacher ]
+  * New upstream release
+  * debian/control:
+    - Set RRR: no
+    - Bump debhelper compat to 12
+    - Bump Standards-Version
+    - B-D on libgtk-3-dev
+  * debian/copyright: Document waflib
+  * debian/: Use Python 3 to run waf
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Wed, 16 Oct 2019 00:47:22 +0200
+
+suil (0.10.0~dfsg0-1) unstable; urgency=medium
+
+  [ Mateusz Łukasik ]
+  * Team upload.
+  * Drop Qt4 support. (Closes: #875205)
+
+  [ Jaromír Mikeš ]
+  * New upstream version 0.10.0~dfsg0
+  * Patch refreshed.
+  * Introduce postclone.sh script to ignore .pc/ dir.
+  * Bump Standards.
+  * Update copyright.
+  * Sign tags.
+  * Update symbols file .
+  * Avoid useless linking.
+
+ -- Jaromír Mikeš <mira.mikes@seznam.cz>  Wed, 04 Oct 2017 20:51:34 +0200
+
+suil (0.8.4~dfsg0-2) unstable; urgency=medium
+
+  * Add patch to fix FTBFS with Qt 5.7. (Closes: #844101)
+  * Set dh/compat 10.
+  * Set dh/compat 10.
+  * Drop dbg package in favour of dbgsym.
+
+ -- Jaromír Mikeš <mira.mikes@seznam.cz>  Sat, 12 Nov 2016 17:27:52 +0100
+
+suil (0.8.4~dfsg0-1) unstable; urgency=medium
+
+  * Fix watch file.
+  * Fix repacking.
+  * New upstream version 0.8.4~dfsg0
+  * Bump Standards.
+  * Fix VCS fields.
+  * Fix hardening.
+  * Add B-D for Qt5 support.
+  * Tighten B-D for lv2-dev.
+  * Update copyright file.
+
+ -- Jaromír Mikeš <mira.mikes@seznam.cz>  Thu, 22 Sep 2016 21:22:24 +0200
+
+suil (0.8.2~dfsg0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Tuned get-orig-source.
+  * Removed old repack scripts.
+  * Compression xz.
+  * Remove --debug from configure to cppflags be passed.
+
+ -- Jaromír Mikeš <mira.mikes@seznam.cz>  Fri, 15 Aug 2014 16:26:15 +0100
+
+suil (0.8.0~dfsg0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Switch to bz2.
+  * Install NEWS file as upstream changelog.
+  * Update symbols file.
+  * Bump Standards.
+
+ -- Jaromír Mikeš <mira.mikes@seznam.cz>  Sat, 03 May 2014 13:24:32 +0100
+
+suil (0.6.16~dfsg0-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Alessio Treglia <alessio@debian.org>  Thu, 03 Oct 2013 17:08:40 +0100
+
+suil (0.6.14~dfsg0-1) unstable; urgency=low
+
+  [ Jaromír Mikeš ]
+  * Added myself as uploader
+
+  [ Alessio Treglia ]
+  * New upstream release.
+  * Update debian/copyright.
+  * Multiarchify the -DBG package.
+
+ -- Alessio Treglia <alessio@debian.org>  Thu, 29 Aug 2013 17:29:14 +0100
+
+suil (0.6.12~dfsg0-2) unstable; urgency=low
+
+  * Upload to unstable.
+  * Bump Standards.
+
+ -- Alessio Treglia <alessio@debian.org>  Wed, 08 May 2013 08:18:06 +0200
+
+suil (0.6.12~dfsg0-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Alessio Treglia <alessio@debian.org>  Mon, 11 Mar 2013 02:22:09 +0000
+
+suil (0.6.10~dfsg0-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Alessio Treglia <alessio@debian.org>  Sat, 29 Dec 2012 16:01:10 +0000
+
+suil (0.6.6~dfsg0-1) experimental; urgency=low
+
+  * Imported Upstream version 0.6.6~dfsg0
+  * Add automated mechanism to repack the tarball.
+
+ -- Alessio Treglia <alessio@debian.org>  Thu, 22 Nov 2012 02:00:34 +0000
+
+suil (0.6.4~dfsg0-3) unstable; urgency=low
+
+  * Pass --gtk2-lib-name="libgtk-x11-2.0.so.0" to configure to avoid
+    adding the dependency on libgtk2.0-dev. Thanks to Filipe Lopes for
+    pointing out this. (really closes: #682138)
+
+ -- Alessio Treglia <alessio@debian.org>  Thu, 23 Aug 2012 15:35:43 +0200
+
+suil (0.6.4~dfsg0-2) unstable; urgency=low
+
+  * Install missing Gtk/Qt4 modules. (Closes: #682138)
+
+ -- Alessio Treglia <alessio@debian.org>  Sat, 18 Aug 2012 15:49:24 +0200
+
+suil (0.6.4~dfsg0-1) unstable; urgency=low
+
+  * New upstream bugfix release:
+    - Correctly handle resizing for GTK+2 in Qt4.
+    - Small improvements to the documentation.
+  * Remove 1001-dont_run_ldconfig.patch, not unnecessary thanks to the
+    improvements to the buildsystem.
+
+ -- Alessio Treglia <alessio@debian.org>  Tue, 10 Jul 2012 15:41:24 +0200
+
+suil (0.6.2~dfsg0-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+  * Fix libsuil-dev's Depends field.
+
+ -- Alessio Treglia <alessio@debian.org>  Wed, 06 Jun 2012 11:54:41 +0200
+
+suil (0.6.0~dfsg0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Port to Multi-Arch.
+  * Refresh patches.
+  * Replace old LV2 build-deps with the newest lv2-dev.
+  * Refresh symbols file.
+  * debian/watch: Mangle dfsg suffix.
+  * Update Vcs-* fields.
+  * Update debian/copyright.
+  * Bump dh requirement to 9.
+  * Bump Standards.
+
+ -- Alessio Treglia <alessio@debian.org>  Sat, 05 May 2012 02:27:22 +0200
+
+suil (0.4.4+dfsg0-1) unstable; urgency=low
+
+  * Repack upstream tarball to get rid of the waf binary (Closes: #654505).
+  * Adjust the clean target to properly clean the sources.
+
+ -- Alessio Treglia <alessio@debian.org>  Tue, 10 Jan 2012 10:08:08 +0100
+
+suil (0.4.4-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control: Fix encoding.
+  * Refresh patches.
+
+ -- Alessio Treglia <alessio@debian.org>  Sun, 12 Jun 2011 12:58:58 +0200
+
+suil (0.4.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #627905).
+
+ -- Alessio Treglia <alessio@debian.org>  Thu, 26 May 2011 09:57:25 +0200
